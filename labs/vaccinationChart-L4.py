@@ -27,7 +27,7 @@ patient_record = {}
 
 #John's data given
 john_smith = [
-    ('HepB', '016'), ('RV', '2 4 6'), ('DTaP', '2 4 6 15'), ('Hib', '2 4 6 12'), ('PCV13', '2 4 6 12'), ('IPV', '2 4 6'), ('IIV4', 'Annual'), ('MMR', '12'), ('VAR', '12'), ('HepA', '12')
+    ('HepB', '0 1 6'), ('RV', '2 4 6'), ('DTaP', '2 4 6 15'), ('Hib', '2 4 6 12'), ('PCV13', '2 4 6 12'), ('IPV', '2 4 6'), ('IIV4', 'Annual'), ('MMR', '12'), ('VAR', '12'), ('HepA', '12')
 ]
 #Calling function to process John's info
 new_john_smith = vaccine_info(john_smith)
@@ -35,7 +35,7 @@ insert(patient_record, 'R001', 'John', 'Smith', new_john_smith)
 
 #Olivia's data given 
 olivia_james = [
-    ('HepB', '016'), ('RV', '2 4 7'), ('DTaP', '2 5 7 12'), ('Hib', '2 4 6 12'), ('PCV13', '2 5 7 12'), ('IPV', '2 5 8'), ('IIV4', 'Annual'), ('MMR', '12'), ('VAR', '12'), ('HepA', '12')
+    ('HepB', '0 1 6'), ('RV', '2 4 7'), ('DTaP', '2 5 7 12'), ('Hib', '2 4 6 12'), ('PCV13', '2 5 7 12'), ('IPV', '2 5 8'), ('IIV4', 'Annual'), ('MMR', '12'), ('VAR', '12'), ('HepA', '12')
 ]
 #Calling function to process Olivia's info 
 new_olivia_james = vaccine_info(olivia_james)
