@@ -1,10 +1,10 @@
 def insert(patient_record, record_num, first_name, last_name, vaccine_info):
-    # Check record number's existance
+    #Check record number's existance
     if record_num in patient_record:
         print(f"Record {record_num} already exists.")
         return
 
-    # Insert new data
+    #Insert new data
     patient_record[record_num] = {
         'First Name': first_name,
         'Last Name': last_name,
@@ -13,7 +13,7 @@ def insert(patient_record, record_num, first_name, last_name, vaccine_info):
 
 def vaccine_info(vaccine_list):
     vaccine_info = {}
-    # Convert vaccine schedule to the required format
+    #Convert vaccine schedule to the required format
     for vaccine in vaccine_list:
         vaccine_name, months = vaccine[0], vaccine[1]
         #Convert to integers other than annual vaccines
