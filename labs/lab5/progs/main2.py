@@ -1,0 +1,12 @@
+from sys import path
+path.append('labs\\lab5\\packages')
+
+import extra.good.best.sigma as sig
+import extra.good.alpha as alp
+from extra.iota import funI
+from extra.good.beta import funB
+
+print(sig.funS())
+print(alp.funA())
+print(funI())
+print(funB())
