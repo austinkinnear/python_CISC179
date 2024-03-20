@@ -1,0 +1,26 @@
+def guess_number():
+    print("Think of a number between 1 and 100!")
+    
+    low = 1
+    high = 100
+    steps = 0
+    
+    while low <= high:
+        mid = (low + high) // 2
+        steps += 1
+        print(f"Is your number greater (>), equal (=), or less (<) than {mid}?")
+        answer = input("Please answer (<, =, >): ").strip()
+        
+        if answer == "=":
+            print("I have guessed it!")
+            print(f"It took {steps} steps!")
+            break
+        elif answer == ">":
+            low = mid + 1
+        elif answer == "<":
+            high = mid - 1
+        else:
+            print("Incorrect input. Please answer with '<', '=', or '>'.")
+            steps -= 1  # Incorrect input does not count as a step.
+
+guess_number()
