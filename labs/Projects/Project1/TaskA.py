@@ -1,5 +1,5 @@
 def guess_number_game(low, high):
-    # Initial prompt for the user to think of a number within the given range
+
     print(f"Think of a number between {low} and {high}!")
     steps = 0  # Initialize the counter for the number of steps (guesses)
 
@@ -35,6 +35,5 @@ def guess_number_game(low, high):
             print("Hmm, something doesn't add up. Are you sure about your answers?")
             return
 
-# Example call to the function with a range of 1 to 100
-# Adjust the range by changing the parameters as needed
+# Range set from 1 to 100, but could be adjusted to any numbers
 guess_number_game(1, 100)

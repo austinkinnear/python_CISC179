@@ -40,7 +40,7 @@ def guess_number_or_letter():
         print(f"It took {steps} steps!")
         return
 
-    # Notify the user of inconsistency if no guess was made
+    # Prints inconsistency if no guess was made
     print("Hmm, something doesn't add up. Are you sure about your answers?")
     if not guessed:
         print(f"No guess was made in {steps} steps. Please ensure your responses are consistent.")
