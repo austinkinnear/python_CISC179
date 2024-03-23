@@ -28,7 +28,6 @@ def binary_search_guess(low, high, elements, element_type):
 
 def guess_number_or_letter():
     # Generate number and letter lists for searching
-    numbers = [str(i) for i in range(1, 101)]
     letters = [chr(i) for i in range(ord('A'), ord('Z')+1)] + [chr(i) for i in range(ord('a'), ord('z')+1)]
     
     print("Think of a number between 1 and 100, or think of a character between A-Z or a-z!")
