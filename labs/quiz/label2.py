@@ -18,8 +18,3 @@ app = MyApp(root)
 root.mainloop()
 
 
-
-self.label1.pack(side="top", anchor="w")
-
-
-self.label2.pack(side="top", anchor = "w")
