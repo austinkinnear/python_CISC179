@@ -2,39 +2,34 @@ from PIL import Image, ImageFilter
 import os
 
 def process_images(source_folder, output_folder):
-    # Ensure the output directory exists
-    os.makedirs(output_folder, exist_ok=True)
-
     # List to keep track of new file names
-    new_file_names = []
+    newFile = []
 
-    # Process each file in the source directory
     for filename in os.listdir(source_folder):
-        if filename.endswith('.jpg'):  # Check for JPEG files
-            # Construct full file path for source and output
+        if filename.endswith('.jpg'):  # Makes sure we are working with jpg which we will convert to png
+            # paths for source and output of Picture#
             source_path = os.path.join(source_folder, filename)
             output_filename = filename.replace('.jpg', '.png')
             output_path = os.path.join(output_folder, output_filename)
 
-            # Open the image, convert to grayscale
+            # Converts each image to grayscale
             with Image.open(source_path) as img:
                 gray_img = img.convert('L')
 
-                # Apply Gaussian blur to the grayscale image
-                blurred_img = gray_img.filter(ImageFilter.GaussianBlur(radius=10))
+                # Gaussian blur to the grayscaled image, adjusting the radius increases or decreases the blur
+                blurred_img = gray_img.filter(ImageFilter.GaussianBlur(radius=2))
                 blurred_img.save(output_path)
 
             # Append the output file name to the list
-            new_file_names.append(output_filename)
+            newFile.append(output_filename)
 
-    # Write the list of new file names to a README file
+    # Writes the new file name within the txt file
     with open(os.path.join(output_folder, 'READ ME.txt'), 'w') as readme_file:
-        for name in new_file_names:
+        for name in newFile:
             readme_file.write(name + '\n')
 
-# Define the paths
+# Paths to my source and output
 source_folder = r'C:\Users\austi\OneDrive\Desktop\python_CISC179\Midterm'
 output_folder = r'C:\Users\austi\OneDrive\Desktop\python_CISC179\midtermProject\Midterm\ProcessedImages'
 
-# Call the function
 process_images(source_folder, output_folder)
